@@ -1,0 +1,76 @@
+﻿Name,Domain,N,|E|,Average Degree,Edge Density
+insecta-ant-colony1-day11,Animal Social,113,3454,61.13,0.5458
+mammalia-voles-bhp-trapping-22,Animal Social,115,239,4.16,0.0365
+mammalia-voles-plj-trapping-27,Animal Social,125,229,3.66,0.0295
+mammalia-voles-bhp-trapping-23,Animal Social,128,253,3.95,0.0311
+mammalia-voles-bhp-trapping-28,Animal Social,153,189,2.47,0.0163
+mammalia-voles-plj-trapping-25,Animal Social,168,503,5.99,0.0359
+mammalia-dolphin-floridatravel,Animal Social,188,1032,10.98,0.0587
+mammalia-dolphin-florida-forage,Animal Social,190,1134,11.94,0.0632
+reptilia-tortoise-network-fi-2008,Animal Social,283,418,2.95,0.0105
+mammalia-dolphin-florida-overall,Animal Social,291,3182,21.87,0.0754
+reptilia-tortoise-network-fi-2011,Animal Social,437,479,2.19,0.0050
+aves-weaver-social,Animal Social,445,1332,5.99,0.0135
+reptilia-tortoise-network-fi,Animal Social,787,1197,3.04,0.0039
+foodweb-little-rock,Biological,183,2434,26.60,0.1462
+bn-mouse-visual-cortex-2,Biological,193,214,2.22,0.0116
+maayan-pdzbase,Biological,212,242,2.28,0.0108
+gene-fusion,Biological,291,279,1.92,0.0066
+Celegans-w,Biological,297,2148,14.46,0.0489
+arenas-meta,Biological,453,2025,8.94,0.0198
+bio-celegans,Biological,453,2025,8.94,0.0198
+bio-diseasome,Biological,516,1188,4.60,0.0089
+bio-DM-LC,Biological,658,1129,3.43,0.0052
+bio-CE-LC,Biological,1387,1648,2.38,0.0017
+bio-yeast,Biological,1458,1948,2.67,0.0018
+moreno-propro-propro,Biological,1846,2203,2.39,0.0013
+GD06-theory,Informational,101,190,3.76,0.0376
+fs-adjnoun-adj-copperfield,Informational,112,425,7.59,0.0684
+DD-g107,Informational,130,292,4.49,0.0348
+email-enron-only,Informational,143,623,8.71,0.0614
+webkb-texas-link1,Informational,285,493,3.46,0.0122
+webkb-wisconsin-link1,Informational,297,565,3.80,0.0129
+webkb-texas-cocite,Informational,334,16494,98.77,0.2966
+webkb-cornell-cocite,Informational,346,13416,77.55,0.2248
+webkb-cornell-link1,Informational,349,696,3.99,0.0115
+webkb-washington-link1,Informational,433,954,4.41,0.0102
+webkb-washington-cocite,Informational,434,15231,70.19,0.1621
+wiki-talk-ht,Informational,446,758,3.40,0.0076
+moreno-highschool,Social,70,274,7.83,0.1135
+moreno-lesmis,Social,77,254,6.60,0.0868
+ia-enron-only,Social,143,623,8.71,0.0614
+arenas-jazz,Social,198,2742,27.70,0.1406
+moreno-oz-oz,Social,217,1839,16.95,0.0785
+moreno-innovation,Social,241,923,7.66,0.0319
+librec-filmtrust-trust,Social,874,1309,3.00,0.0034
+petster-hamster-household,Social,921,4032,8.76,0.0095
+dimacs10-netscience,Social,1461,2742,3.75,0.0026
+petster-friendships-hamster-uniq,Social,1858,12534,13.49,0.0073
+comp2012Net,Social,2175,4541,4.18,0.0019
+comp2014Net,Social,2401,5930,4.94,0.0021
+ego-facebook,Social,2888,2981,2.06,0.0007
+81-ISCAS89-s1208,Technological,131,190,2.90,0.0223
+83-ISCAS89-s1298,Technological,156,264,3.38,0.0218
+86-ISCAS89-s1382,Technological,183,313,3.42,0.0188
+87-ISCAS89-s1386,Technological,185,360,3.89,0.0212
+88-ISCAS89-s1400,Technological,187,327,3.50,0.0188
+91-ISCAS89-s1444,Technological,210,363,3.46,0.0165
+89-ISCAS89-s1420,Technological,269,400,2.97,0.0111
+466-5728dc4b461efe0c7a675f37,Technological,362,617,3.41,0.0094
+438-588f93d5a411221d0e7c6793,Technological,398,943,4.74,0.0119
+434-58866954a411221d0e7c6781,Technological,435,1303,5.99,0.0138
+460-5728dc4b461efe0c7a675f3d,Technological,441,802,3.64,0.0083
+77-ISCAS89-s1238,Technological,567,1070,3.77,0.0067
+contiguous-usa,Transportation,49,107,4.37,0.0910
+urban-brasilia,Transportation,179,230,2.57,0.0144
+urban-washington,Transportation,192,302,3.15,0.0165
+convote,Transportation,219,521,4.76,0.0218
+410-59488c124ed8f1bb6022a8df,Transportation,224,376,3.36,0.0151
+urban-new-york,Transportation,248,418,3.37,0.0136
+inf-USAir97,Transportation,332,2126,12.81,0.0387
+411-59488c124ed8f1bb6022a8de,Transportation,397,644,3.24,0.0082
+urban-vienna,Transportation,467,691,2.96,0.0064
+euroroad,Transportation,1174,1417,2.41,0.0021
+ATC,Transportation,1226,2408,3.93,0.0032
+opsahl-powergrid,Transportation,4941,6594,2.67,0.0005
+as20000102,Transportation,6474,12572,3.88,0.0006
