@@ -31,7 +31,7 @@ def run_TP(
     test_neg = sampler(visible_pos_edges=edges, num_samples=len(test_pos),
                        seed=split_seed1 + 100, nodes=nodes)
 
-    out_dir = os.path.join(project_root, "datasets", filename, f"TP_{split_seed1}")
+    out_dir = os.path.join(project_root, "datasets", filename, f"TP_{sampler_name}_{split_seed1}")
     save_edges_txt(os.path.join(out_dir, "Train_pos.txt"), train_pos)
     save_edges_txt(os.path.join(out_dir, "Test_pos.txt"), test_pos)
     save_edges_txt(os.path.join(out_dir, "Test_neg.txt"), test_neg)

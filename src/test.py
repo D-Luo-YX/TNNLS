@@ -10,7 +10,7 @@ if __name__ == "__main__":
     # === 选择策略（名称即注册名） ===
     tp_split_strategy = "random"
     tv_split_strategy = "random"
-    sampler_name = "random_visible"
+    sampler_name = "random"
 
     # === 超参数（可随实验改动） ===
     test_ratio  = 0.10

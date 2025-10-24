@@ -1,4 +1,6 @@
 import random
+import networkx as nx
+from collections import Counter
 from typing import Dict, Iterable, List, Set, Tuple
 from ..graph_utils import as_edge, all_nodes_from_edges
 
@@ -17,7 +19,7 @@ def get_sampler(name: str) -> SamplerFn:
         raise KeyError(f"Unknown Samplers: {name}. Chosen: {list(_SAMPLERS)}")
     return _SAMPLERS[name]
 
-@register_sampler("random_visible")
+@register_sampler("random")
 def sample_random_visible(
     visible_pos_edges: Iterable[Tuple[int, int]],
     num_samples: int,
@@ -57,3 +59,45 @@ def sample_random_visible(
     if len(negs) < num_samples:
         raise RuntimeError("Failure to collect enough negative samples (random rejection sampling is limited).")
     return list(negs)
+
+@register_sampler("degree_weighted")
+def sample_degree_weighted(
+    visible_pos_edges,
+    num_samples,
+    seed,
+    nodes=None,
+):
+    """
+    度加权采样：在可见图的补图上，按度乘积加权抽样。
+    （越大度节点越容易被采到，模拟hard negative）
+    """
+
+    rnd = random.Random(seed)
+    pos_set = set(as_edge(u, v) for u, v in visible_pos_edges if u != v)
+    if nodes is None:
+        nodes = all_nodes_from_edges(pos_set)
+    nlist = list(nodes)
+    n = len(nlist)
+
+    # 统计度
+    deg = Counter()
+    for u, v in visible_pos_edges:
+        deg[u] += 1
+        deg[v] += 1
+
+    # 计算采样权重（按度乘积）
+    weights = []
+    pairs = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            u, v = nlist[i], nlist[j]
+            if (u, v) in pos_set:
+                continue
+            pairs.append((u, v))
+            weights.append((deg[u] + 1) * (deg[v] + 1))
+
+    # 归一化采样
+    total = sum(weights)
+    probs = [w / total for w in weights]
+    neg_edges = rnd.choices(pairs, weights=probs, k=num_samples)
+    return neg_edges

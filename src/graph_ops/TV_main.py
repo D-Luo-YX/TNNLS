@@ -19,7 +19,7 @@ def run_TV(
       - Train_pos.txt (T_pos), Train_neg.txt  （在 T 可见）
       - Val_pos.txt   (V_pos), Val_neg.txt    （在 T+V 可见）
     """
-    tp_dir = os.path.join(project_root, "datasets", filename, f"TP_{split_seed1}")
+    tp_dir = os.path.join(project_root, "datasets", filename, f"TP_{sampler_name}_{split_seed1}")
     base_train_pos = load_edges_txt(os.path.join(tp_dir, "Train_pos.txt"))
 
     # TV 划分
@@ -39,7 +39,7 @@ def run_TV(
     Train_neg = sampler(T_visible, num_samples=len(T_pos), seed=split_seed2 + 11, nodes=nodes)
     Val_neg   = sampler(TV_visible, num_samples=len(V_pos), seed=split_seed2 + 22, nodes=nodes)
 
-    out_dir = os.path.join(tp_dir, f"TV_{split_seed2}")
+    out_dir = os.path.join(tp_dir, f"TV_{sampler_name}_{split_seed2}")
     save_edges_txt(os.path.join(out_dir, "Train_pos.txt"), T_pos)
     save_edges_txt(os.path.join(out_dir, "Train_neg.txt"), Train_neg)
     save_edges_txt(os.path.join(out_dir, "Val_pos.txt"), V_pos)
